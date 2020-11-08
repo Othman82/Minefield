@@ -26,7 +26,7 @@ namespace Minefield
         {
             Label lbl = getLabel(atX, atY);
             lbl.BackColor = Color.White;
-            lbl.Image = Properties.Resources.Soldier;
+            lbl.Image = Properties.Resources.Ship;
         }
 
         //Using this it is easy to set up the start position of the sprite on start-up…
@@ -48,7 +48,16 @@ namespace Minefield
             return null;
         }
 
-       private void Form1_Load(object sender, EventArgs e)
+
+        //function to undraw the sprite at location (x,y)
+        private void wipesprite(int x, int y)
+        {
+            Label lbl = getLabel(atX, atY);
+            lbl.Image = null;
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

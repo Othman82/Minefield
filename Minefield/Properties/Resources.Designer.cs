@@ -63,9 +63,9 @@ namespace Minefield.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Soldier {
+        internal static System.Drawing.Bitmap Ship {
             get {
-                object obj = ResourceManager.GetObject("Soldier", resourceCulture);
+                object obj = ResourceManager.GetObject("Ship", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
