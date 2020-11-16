@@ -19,7 +19,7 @@ namespace Minefield
         {
             InitializeComponent();
             //place the sprite at its start-up location
-            drawsprite(atX, atY);
+            drawsprite(atX, atY);         
         }
 
         private void drawsprite (int x, int y)
@@ -54,13 +54,50 @@ namespace Minefield
         {
             Label lbl = getLabel(atX, atY);
             lbl.Image = null;
+
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnUp_Click_1(object sender, EventArgs e)
         {
+            if (atY > 1)
+            {
+                wipesprite(atX, atY);
+                atY--;
+                drawsprite(atX, atY);
+            }
+        }
+
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            if (atY > 1)
+            {
+                wipesprite(atX, atY);
+                atX++;
+                drawsprite(atX, atY);
+            }
 
         }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            if (atY > 1)
+            {
+                wipesprite(atX, atY);
+                atY++;
+                drawsprite(atX, atY);
+            }
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            if (atY > 1)
+            {
+                wipesprite(atY, atX);
+                atX--;
+                drawsprite(atX, atY);
+            }
+        }
+
 
 
     }

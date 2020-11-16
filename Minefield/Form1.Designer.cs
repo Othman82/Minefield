@@ -429,10 +429,10 @@
             this.label398 = new System.Windows.Forms.Label();
             this.label399 = new System.Windows.Forms.Label();
             this.label400 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.btnLeft = new System.Windows.Forms.Button();
+            this.btnUp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -4044,56 +4044,59 @@
             this.label400.Size = new System.Drawing.Size(20, 20);
             this.label400.TabIndex = 400;
             // 
-            // button1
+            // btnDown
             // 
-            this.button1.Location = new System.Drawing.Point(384, 462);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDown.Image = global::Minefield.Properties.Resources.down;
+            this.btnDown.Location = new System.Drawing.Point(384, 491);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(25, 25);
+            this.btnDown.TabIndex = 4;
+            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
-            // button2
+            // btnRight
             // 
-            this.button2.Location = new System.Drawing.Point(341, 476);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 22);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRight.Image = global::Minefield.Properties.Resources.right;
+            this.btnRight.Location = new System.Drawing.Point(416, 476);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(25, 25);
+            this.btnRight.TabIndex = 3;
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
-            // button3
+            // btnLeft
             // 
-            this.button3.Location = new System.Drawing.Point(427, 476);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 22);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnLeft.Image = global::Minefield.Properties.Resources.left;
+            this.btnLeft.Location = new System.Drawing.Point(353, 476);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(25, 25);
+            this.btnLeft.TabIndex = 2;
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // button4
+            // btnUp
             // 
-            this.button4.Location = new System.Drawing.Point(384, 490);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 22);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUp.Image = global::Minefield.Properties.Resources.Up;
+            this.btnUp.Location = new System.Drawing.Point(384, 459);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(25, 25);
+            this.btnUp.TabIndex = 1;
+            this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 521);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnRight);
+            this.Controls.Add(this.btnLeft);
+            this.Controls.Add(this.btnUp);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -4503,10 +4506,10 @@
         private System.Windows.Forms.Label label398;
         private System.Windows.Forms.Label label399;
         private System.Windows.Forms.Label label400;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnLeft;
+        private System.Windows.Forms.Button btnRight;
+        private System.Windows.Forms.Button btnDown;
     }
 }
 
