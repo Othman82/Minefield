@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -433,6 +434,9 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblMyTime = new System.Windows.Forms.Label();
+            this.restartGame = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -4084,11 +4088,39 @@
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblMyTime
+            // 
+            this.lblMyTime.AutoSize = true;
+            this.lblMyTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMyTime.Location = new System.Drawing.Point(27, 9);
+            this.lblMyTime.Name = "lblMyTime";
+            this.lblMyTime.Size = new System.Drawing.Size(127, 26);
+            this.lblMyTime.TabIndex = 5;
+            this.lblMyTime.Text = "30 Seconds";
+            // 
+            // restartGame
+            // 
+            this.restartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartGame.Location = new System.Drawing.Point(30, 468);
+            this.restartGame.Name = "restartGame";
+            this.restartGame.Size = new System.Drawing.Size(75, 33);
+            this.restartGame.TabIndex = 6;
+            this.restartGame.Text = "Restart";
+            this.restartGame.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 521);
+            this.Controls.Add(this.restartGame);
+            this.Controls.Add(this.lblMyTime);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnLeft);
@@ -4099,6 +4131,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -4510,6 +4543,9 @@
         private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblMyTime;
+        private System.Windows.Forms.Button restartGame;
     }
 }
 

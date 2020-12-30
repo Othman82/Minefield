@@ -201,6 +201,20 @@ namespace Minefield
             }
         }
 
-
+        int timeLeft = 30;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft = timeLeft - 1;
+                lblMyTime.Text = timeLeft + " Seconds";
+            }
+            else
+            {
+                MessageBox.Show("Sorry, you run out of time");
+                
+                
+            }
+        }
     }
 }
