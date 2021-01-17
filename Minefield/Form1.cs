@@ -246,10 +246,11 @@ namespace Minefield
                 btnRight.Enabled = false;
                 btnLeft.Enabled = false;
                 isGameOver = true;
-                timer1.Stop();
-                restartGame.Visible = true;
+                timer1.Stop(); // timer stops when bomb checks 
+                restartGame.Visible = true; // restart game button will be visible again in the form
                 showBombs();
 
+                // the explotion sound will play when bomb checked and game is over
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Explosion);
                 player.Play();
 
@@ -283,35 +284,39 @@ namespace Minefield
         }
 
 
-        int timeLeft =10;
+
+        // timer to set the game duration to 20 seconds 
+        int timeLeft =20; 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (timeLeft > 0 )
             {
                 timeLeft = timeLeft - 1;
                 lblMyTime.Text = timeLeft + " Seconds";
-                restartGame.Visible = false;
+                restartGame.Visible = false;  // restart game button is not visible in this stage 
                 
             }
             else
             {
-                        
+                // this text message will show when the 20 sconds pass        
                 lblMessage.Text = ("Sorry, you run out of time");
-                restartGame.Visible = true;
-                timer1.Stop();
+                restartGame.Visible = true; // restart game button is visible in this stage 
+                //timer1.Stop();
 
             }
 
         }
 
+        // this to help the player see the bombs 
         private void btnShowbombs_Click(object sender, EventArgs e)
         {
 
             showBombs();
-            btnShowbombs.Enabled = true;
+           // btnShowbombs.Enabled = true;
             
         }
 
+        // the restartGame button will restart the application/game 
         private void restartGame_Click(object sender, EventArgs e)
         {
             Application.Restart();

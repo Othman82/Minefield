@@ -4067,14 +4067,14 @@
             this.lblMyTime.Name = "lblMyTime";
             this.lblMyTime.Size = new System.Drawing.Size(127, 26);
             this.lblMyTime.TabIndex = 5;
-            this.lblMyTime.Text = "30 Seconds";
+            this.lblMyTime.Text = "20 Seconds";
             // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
             this.lblMessage.Location = new System.Drawing.Point(150, 10);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(120, 25);
