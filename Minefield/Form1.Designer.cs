@@ -433,6 +433,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblMyTime = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.livesLabel = new System.Windows.Forms.Label();
             this.btnHidebombs = new System.Windows.Forms.Button();
             this.btnShowbombs = new System.Windows.Forms.Button();
             this.restartGame = new System.Windows.Forms.Button();
@@ -440,8 +442,6 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
-            this.scoreLabel = new System.Windows.Forms.Label();
-            this.livesLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -4081,6 +4081,26 @@
             this.lblMessage.TabIndex = 8;
             this.lblMessage.Text = "..................";
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(461, 60);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(106, 25);
+            this.scoreLabel.TabIndex = 10;
+            this.scoreLabel.Text = "Score 10";
+            // 
+            // livesLabel
+            // 
+            this.livesLabel.AutoSize = true;
+            this.livesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.livesLabel.Location = new System.Drawing.Point(461, 96);
+            this.livesLabel.Name = "livesLabel";
+            this.livesLabel.Size = new System.Drawing.Size(88, 25);
+            this.livesLabel.TabIndex = 11;
+            this.livesLabel.Text = "Lives 3";
+            // 
             // btnHidebombs
             // 
             this.btnHidebombs.BackgroundImage = global::Minefield.Properties.Resources.Hide;
@@ -4157,26 +4177,6 @@
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
             // 
-            // scoreLabel
-            // 
-            this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.Location = new System.Drawing.Point(461, 60);
-            this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(106, 25);
-            this.scoreLabel.TabIndex = 10;
-            this.scoreLabel.Text = "Score 10";
-            // 
-            // livesLabel
-            // 
-            this.livesLabel.AutoSize = true;
-            this.livesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.livesLabel.Location = new System.Drawing.Point(461, 96);
-            this.livesLabel.Name = "livesLabel";
-            this.livesLabel.Size = new System.Drawing.Size(88, 25);
-            this.livesLabel.TabIndex = 11;
-            this.livesLabel.Text = "Lives 3";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4198,7 +4198,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "MINEFIELD GAME";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
