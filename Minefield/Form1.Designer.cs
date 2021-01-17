@@ -440,6 +440,8 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.livesLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -4072,8 +4074,8 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.Crimson;
-            this.lblMessage.Location = new System.Drawing.Point(208, 9);
+            this.lblMessage.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblMessage.Location = new System.Drawing.Point(150, 10);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(120, 25);
             this.lblMessage.TabIndex = 8;
@@ -4084,7 +4086,7 @@
             this.btnHidebombs.BackgroundImage = global::Minefield.Properties.Resources.Hide;
             this.btnHidebombs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHidebombs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHidebombs.Location = new System.Drawing.Point(486, 228);
+            this.btnHidebombs.Location = new System.Drawing.Point(466, 248);
             this.btnHidebombs.Name = "btnHidebombs";
             this.btnHidebombs.Size = new System.Drawing.Size(75, 45);
             this.btnHidebombs.TabIndex = 9;
@@ -4096,7 +4098,7 @@
             this.btnShowbombs.BackgroundImage = global::Minefield.Properties.Resources.Show;
             this.btnShowbombs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShowbombs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowbombs.Location = new System.Drawing.Point(486, 140);
+            this.btnShowbombs.Location = new System.Drawing.Point(466, 168);
             this.btnShowbombs.Name = "btnShowbombs";
             this.btnShowbombs.Size = new System.Drawing.Size(75, 45);
             this.btnShowbombs.TabIndex = 7;
@@ -4108,7 +4110,7 @@
             this.restartGame.BackgroundImage = global::Minefield.Properties.Resources.restart;
             this.restartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restartGame.Location = new System.Drawing.Point(483, 316);
+            this.restartGame.Location = new System.Drawing.Point(30, 475);
             this.restartGame.Name = "restartGame";
             this.restartGame.Size = new System.Drawing.Size(75, 45);
             this.restartGame.TabIndex = 6;
@@ -4118,7 +4120,7 @@
             // btnDown
             // 
             this.btnDown.Image = global::Minefield.Properties.Resources.down;
-            this.btnDown.Location = new System.Drawing.Point(373, 485);
+            this.btnDown.Location = new System.Drawing.Point(367, 495);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(25, 26);
             this.btnDown.TabIndex = 4;
@@ -4128,7 +4130,7 @@
             // btnRight
             // 
             this.btnRight.Image = global::Minefield.Properties.Resources.right;
-            this.btnRight.Location = new System.Drawing.Point(405, 470);
+            this.btnRight.Location = new System.Drawing.Point(399, 480);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(25, 26);
             this.btnRight.TabIndex = 3;
@@ -4138,7 +4140,7 @@
             // btnLeft
             // 
             this.btnLeft.Image = global::Minefield.Properties.Resources.left;
-            this.btnLeft.Location = new System.Drawing.Point(342, 470);
+            this.btnLeft.Location = new System.Drawing.Point(336, 480);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(25, 26);
             this.btnLeft.TabIndex = 2;
@@ -4148,12 +4150,32 @@
             // btnUp
             // 
             this.btnUp.Image = global::Minefield.Properties.Resources.Up;
-            this.btnUp.Location = new System.Drawing.Point(373, 453);
+            this.btnUp.Location = new System.Drawing.Point(367, 463);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(25, 26);
             this.btnUp.TabIndex = 1;
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(461, 60);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(106, 25);
+            this.scoreLabel.TabIndex = 10;
+            this.scoreLabel.Text = "Score 10";
+            // 
+            // livesLabel
+            // 
+            this.livesLabel.AutoSize = true;
+            this.livesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.livesLabel.Location = new System.Drawing.Point(461, 96);
+            this.livesLabel.Name = "livesLabel";
+            this.livesLabel.Size = new System.Drawing.Size(88, 25);
+            this.livesLabel.TabIndex = 11;
+            this.livesLabel.Text = "Lives 3";
             // 
             // Form1
             // 
@@ -4161,6 +4183,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightYellow;
             this.ClientSize = new System.Drawing.Size(605, 550);
+            this.Controls.Add(this.livesLabel);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.btnHidebombs);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnShowbombs);
@@ -4596,6 +4620,8 @@
         private System.Windows.Forms.Button btnShowbombs;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Button btnHidebombs;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label livesLabel;
     }
 }
 

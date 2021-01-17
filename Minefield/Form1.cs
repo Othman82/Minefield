@@ -23,12 +23,15 @@ namespace Minefield
         int MIN_X = 1;
 
         bool[,] bombs = new bool[21, 21]; //a boolean array that indicates where the mines are
+        private GameState gameState;
 
         public Form1()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            gameState = new GameState(livesLabel, scoreLabel);
             drawsprite(atX, atY);  //place the sprite at its start-up location
             placeBombs(80);       // make bombs
+
         }
 
         //a function to draw the sprite at location (x,y)
@@ -247,10 +250,14 @@ namespace Minefield
                 restartGame.Visible = true;
                 showBombs();
 
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Explosion);
+                player.Play();
+
             }
             else
             {
                 countBombs(x, y); //count bombs around current location
+                gameState.increaseScore(); // when ever the sprite move one label up score will increase by 10
             }
         }
 
@@ -288,13 +295,11 @@ namespace Minefield
             }
             else
             {
-           
-               
+                        
                 lblMessage.Text = ("Sorry, you run out of time");
                 restartGame.Visible = true;
                 timer1.Stop();
 
-                // MessageBox.Show("Sorry, you run out of time");                
             }
 
         }
