@@ -71,7 +71,7 @@ namespace Minefield
 
         }
 
-        private bool isGameOver = false;
+        private bool isGameOver = false; // this to help to prevent the sprite moving after it check bomb
         // using keycodes e.g. WSDA keys to move the sprite 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -130,37 +130,37 @@ namespace Minefield
             }
         }
         //using buttons on the form to move the sprite
-        private void btnUp_Click_1(object sender, EventArgs e)
+        private void btnUp_Click_1(object sender, EventArgs e) //moves the sprite up 
         {
-            if (atY > 1)
+            if (atY > 1) // prvent the sprite from going off the top of the grid 
             {
-                wipesprite(atX, atY);
-                atY--;
-                drawsprite(atX, atY);
-                chkBomb(atX, atY);
+                wipesprite(atX, atY); //delete the sprite at current location
+                atY--;                // move up by one row
+                drawsprite(atX, atY); //draw the sprite at the new location
+                chkBomb(atX, atY);    // check if gone over bomb
             }
         }
 
-        private void btnRight_Click(object sender, EventArgs e)
+        private void btnRight_Click(object sender, EventArgs e)  //moves the sprite right
         {
-            if (atY > 1)
+            if (atY > 1)    // prvent the sprite from going off the top of the grid 
             {
-                wipesprite(atX, atY);
-                atX++;
-                drawsprite(atX, atY);
-                chkBomb(atX, atY);
+                wipesprite(atX, atY);//delete the sprite at current location
+                atX++;              //move right by ine row
+                drawsprite(atX, atY); //draw the sprite at the new location
+                chkBomb(atX, atY); // check if gone over bomb
             }
 
         }
 
-        private void btnDown_Click(object sender, EventArgs e)
+        private void btnDown_Click(object sender, EventArgs e) //moves the sprite down
         {
-            if (atY > 1)
+            if (atY > 1) // prvent the sprite from going off the top of the grid 
             {
-                wipesprite(atX, atY);
+                wipesprite(atX, atY); //delete the sprite at current location
                 atY++;
-                drawsprite(atX, atY);
-                chkBomb(atX, atY);
+                drawsprite(atX, atY); //draw the sprite at the new location
+                chkBomb(atX, atY); // check if gone over bomb
             }
         }
 
