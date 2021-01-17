@@ -430,13 +430,16 @@
             this.label398 = new System.Windows.Forms.Label();
             this.label399 = new System.Windows.Forms.Label();
             this.label400 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblMyTime = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.btnHidebombs = new System.Windows.Forms.Button();
+            this.btnShowbombs = new System.Windows.Forms.Button();
+            this.restartGame = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblMyTime = new System.Windows.Forms.Label();
-            this.restartGame = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -4048,46 +4051,6 @@
             this.label400.Size = new System.Drawing.Size(20, 20);
             this.label400.TabIndex = 400;
             // 
-            // btnDown
-            // 
-            this.btnDown.Image = global::Minefield.Properties.Resources.down;
-            this.btnDown.Location = new System.Drawing.Point(384, 491);
-            this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(25, 25);
-            this.btnDown.TabIndex = 4;
-            this.btnDown.UseVisualStyleBackColor = true;
-            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
-            // 
-            // btnRight
-            // 
-            this.btnRight.Image = global::Minefield.Properties.Resources.right;
-            this.btnRight.Location = new System.Drawing.Point(416, 476);
-            this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(25, 25);
-            this.btnRight.TabIndex = 3;
-            this.btnRight.UseVisualStyleBackColor = true;
-            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
-            // 
-            // btnLeft
-            // 
-            this.btnLeft.Image = global::Minefield.Properties.Resources.left;
-            this.btnLeft.Location = new System.Drawing.Point(353, 476);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(25, 25);
-            this.btnLeft.TabIndex = 2;
-            this.btnLeft.UseVisualStyleBackColor = true;
-            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
-            // 
-            // btnUp
-            // 
-            this.btnUp.Image = global::Minefield.Properties.Resources.Up;
-            this.btnUp.Location = new System.Drawing.Point(384, 459);
-            this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(25, 25);
-            this.btnUp.TabIndex = 1;
-            this.btnUp.UseVisualStyleBackColor = true;
-            this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -4104,21 +4067,103 @@
             this.lblMyTime.TabIndex = 5;
             this.lblMyTime.Text = "30 Seconds";
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Crimson;
+            this.lblMessage.Location = new System.Drawing.Point(208, 9);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(120, 25);
+            this.lblMessage.TabIndex = 8;
+            this.lblMessage.Text = "..................";
+            // 
+            // btnHidebombs
+            // 
+            this.btnHidebombs.BackgroundImage = global::Minefield.Properties.Resources.Hide;
+            this.btnHidebombs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHidebombs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidebombs.Location = new System.Drawing.Point(486, 228);
+            this.btnHidebombs.Name = "btnHidebombs";
+            this.btnHidebombs.Size = new System.Drawing.Size(75, 45);
+            this.btnHidebombs.TabIndex = 9;
+            this.btnHidebombs.UseVisualStyleBackColor = true;
+            this.btnHidebombs.Click += new System.EventHandler(this.btnHidebombs_Click);
+            // 
+            // btnShowbombs
+            // 
+            this.btnShowbombs.BackgroundImage = global::Minefield.Properties.Resources.Show;
+            this.btnShowbombs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnShowbombs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowbombs.Location = new System.Drawing.Point(486, 140);
+            this.btnShowbombs.Name = "btnShowbombs";
+            this.btnShowbombs.Size = new System.Drawing.Size(75, 45);
+            this.btnShowbombs.TabIndex = 7;
+            this.btnShowbombs.UseVisualStyleBackColor = true;
+            this.btnShowbombs.Click += new System.EventHandler(this.btnShowbombs_Click);
+            // 
             // restartGame
             // 
+            this.restartGame.BackgroundImage = global::Minefield.Properties.Resources.restart;
+            this.restartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.restartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restartGame.Location = new System.Drawing.Point(30, 468);
+            this.restartGame.Location = new System.Drawing.Point(483, 316);
             this.restartGame.Name = "restartGame";
-            this.restartGame.Size = new System.Drawing.Size(75, 33);
+            this.restartGame.Size = new System.Drawing.Size(75, 45);
             this.restartGame.TabIndex = 6;
-            this.restartGame.Text = "Restart";
             this.restartGame.UseVisualStyleBackColor = true;
+            this.restartGame.Click += new System.EventHandler(this.restartGame_Click);
+            // 
+            // btnDown
+            // 
+            this.btnDown.Image = global::Minefield.Properties.Resources.down;
+            this.btnDown.Location = new System.Drawing.Point(373, 485);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(25, 26);
+            this.btnDown.TabIndex = 4;
+            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            // 
+            // btnRight
+            // 
+            this.btnRight.Image = global::Minefield.Properties.Resources.right;
+            this.btnRight.Location = new System.Drawing.Point(405, 470);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(25, 26);
+            this.btnRight.TabIndex = 3;
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.Image = global::Minefield.Properties.Resources.left;
+            this.btnLeft.Location = new System.Drawing.Point(342, 470);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(25, 26);
+            this.btnLeft.TabIndex = 2;
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            // 
+            // btnUp
+            // 
+            this.btnUp.Image = global::Minefield.Properties.Resources.Up;
+            this.btnUp.Location = new System.Drawing.Point(373, 453);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(25, 26);
+            this.btnUp.TabIndex = 1;
+            this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 521);
+            this.BackColor = System.Drawing.Color.LightYellow;
+            this.ClientSize = new System.Drawing.Size(605, 550);
+            this.Controls.Add(this.btnHidebombs);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.btnShowbombs);
             this.Controls.Add(this.restartGame);
             this.Controls.Add(this.lblMyTime);
             this.Controls.Add(this.btnDown);
@@ -4127,8 +4172,10 @@
             this.Controls.Add(this.btnUp);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -4546,6 +4593,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblMyTime;
         private System.Windows.Forms.Button restartGame;
+        private System.Windows.Forms.Button btnShowbombs;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Button btnHidebombs;
     }
 }
 
